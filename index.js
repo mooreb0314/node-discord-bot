@@ -12,8 +12,8 @@ dotenv.config();
 client.registry
 	.registerDefaultTypes()
 	.registerGroups([
-        ['first', 'Your First Command Group'],
-        ['second', 'Your Second Command Group']
+        ['test', 'Your Test Command Group'],
+        ['utilities', 'Your Utilities Command Group']
 	])
 	.registerDefaultGroups()
 	.registerDefaultCommands()
