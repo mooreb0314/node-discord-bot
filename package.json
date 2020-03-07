@@ -1,44 +1,45 @@
 {
-  "name": "node-discord-bot",
-  "version": "0.1.0",
-  "description": "A sample Node.js app hosted via heroku",
-  "engines": {
-    "node": "12.x"
-  },
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
-  },
-  "dependencies": {
-    "discord.js": "11.5.1",
-    "dotenv": "8.2.0",
-    "discord.js-commando": "0.10.0",
-    "sqlite": "^2.0.0",
-    "roll": "1.2.0 "
-  },
-  "devDependencies": {
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "husky": "^4.2.1"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mooreb0314/node-discord-bot"
-  },
-  "license": "MIT"
+    "name": "node-discord-bot",
+    "version": "0.1.0",
+    "description": "A sample Node.js app hosted via heroku",
+    "engines": {
+        "node": "12.x"
+    },
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "node test.js"
+    },
+    "dependencies": {
+        "discord.js": "11.5.1",
+        "dotenv": "8.2.0",
+        "discord.js-commando": "0.10.0",
+        "sqlite": "^2.0.0",
+        "roll": "1.2.0 "
+    },
+    "devDependencies": {
+        "eslint": "^6.1.0",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.1",
+        "prettier": "^1.19.1"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mooreb0314/node-discord-bot"
+    },
+    "license": "MIT"
 }
