@@ -1,31 +1,29 @@
 const dotenv = require("dotenv");
+const { CommandoClient } = require('discord.js-commando');
+const path = require('path');
+
+const client = new CommandoClient({
+	commandPrefix: '!',
+	owner: '318021117065428992'
+});
+
 dotenv.config();
-const Discord = require("discord.js");
 
-const prefix = process.env.PREFIX;
-const TOKEN = process.env[`DISCORD_${process.env.ENV}`];
-const client = new Discord.Client();
+client.registry
+	.registerDefaultTypes()
+	.registerGroups([
+        ['first', 'Your First Command Group'],
+        ['second', 'Your Second Command Group']
+	])
+	.registerDefaultGroups()
+	.registerDefaultCommands()
+	.registerCommandsIn(path.join(__dirname, 'commands'));
 
-client.on("message", async (message) => {
-    // Exit and stop if it's not there and prevent botception
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
-
-    try {
-        if (message.content.startsWith(`${prefix}ping`)) {
-            await message.channel.send("pong!");
-        }
-
-        if (message.content.startsWith(`${prefix}foo`)) {
-            await message.channel.send("bar!");
-        }
-    } catch (err) {
-        message.channel.send(err);
-    }
+client.once('ready', () => {
+	console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
+	client.user.setActivity('with Commando');
 });
 
-client.on("ready", () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-});
+client.on('error', console.error);
 
-
-client.login(TOKEN);
+client.login(process.env.DISCORD_DEV);
