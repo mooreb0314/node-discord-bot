@@ -26,4 +26,4 @@ client.once('ready', () => {
 
 client.on('error', console.error);
 
-client.login(process.env.DISCORD_DEV);
+client.login(process.env[`DISCORD_${process.env.ENV}`]);
