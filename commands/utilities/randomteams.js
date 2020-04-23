@@ -33,7 +33,7 @@ module.exports = class SayCommand extends Command {
         const splitTeams = shuffledMembers.chunk(numTeams);
         // Outputs : [ [1,2,3] , [4,5,6] ,[7,8] ]
 
-        let teamString = `--- Randomized Teams ---`;
+        let teamString = `--- Randomized Teams ---\n`;
 
         for(let splitTeam in splitTeams){
             teamString += `Team ${parseInt(splitTeam) + 1}: \n`;
