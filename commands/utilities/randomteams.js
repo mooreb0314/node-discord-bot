@@ -3,10 +3,10 @@ const { Command } = require("discord.js-commando");
 module.exports = class SayCommand extends Command {
     constructor(client) {
         super(client, {
-            name: "randomteams",
-            aliases: ["rt", "teams"],
+            name: "teams",
+            aliases: ["rt", "randomteams"],
             group: "utilities",
-            memberName: "randomteams",
+            memberName: "teams",
             description: "Randomizes teams in a channel",
             args: [
                 {
