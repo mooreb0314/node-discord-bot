@@ -23,9 +23,10 @@ module.exports = class TeamCommand extends Command {
         
         const voiceChannel = message.member.voiceChannelID;
         const membersMap = message.channel.guild.channels.get(voiceChannel).members;
+        console.log(membersMap);
         const members = Array.from(membersMap.keys());
         const shuffledMembers = shuffle(members).map(member => {
-            return `<@${member}>`;
+            return `${membersMap.get(member).user.username}`;
         });
             
 
