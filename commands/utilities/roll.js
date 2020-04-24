@@ -3,7 +3,7 @@ const Roll = require("roll");
 
 const roll = new Roll();
 
-module.exports = class SayCommand extends Command {
+module.exports = class RollCommand extends Command {
     constructor(client) {
         super(client, {
             name: "roll",

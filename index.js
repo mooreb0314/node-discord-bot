@@ -13,7 +13,8 @@ client.registry
     .registerDefaultTypes()
     .registerGroups([
         ["test", "Your Test Command Group"],
-        ["utilities", "Your Utilities Command Group"]
+        ["utilities", "Your Utilities Command Group"],
+        ["admin","Admin Command Group"]
     ])
     .registerDefaultGroups()
     .registerDefaultCommands()

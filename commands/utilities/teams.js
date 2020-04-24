@@ -1,6 +1,6 @@
 const { Command } = require("discord.js-commando");
 
-module.exports = class SayCommand extends Command {
+module.exports = class TeamCommand extends Command {
     constructor(client) {
         super(client, {
             name: "teams",
@@ -30,7 +30,7 @@ module.exports = class SayCommand extends Command {
             
 
         // Split in group of 3 items
-        const splitTeams = shuffledMembers.chunk(numTeams);
+        const splitTeams = shuffledMembers.chunk(Math.ceil(members.length/numTeams));
         // Outputs : [ [1,2,3] , [4,5,6] ,[7,8] ]
 
         let teamString = `--- Randomized Teams ---\n`;
